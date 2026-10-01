@@ -1,0 +1,13 @@
+#!name=Instagram 去广告
+#!desc=去除 Instagram 信息流/Reels/快拍/探索页赞助内容。App 有证书锁定，可能失效；若无法刷新请停用本模块。
+#!author=carlleilzj/Meta_AdBlock_QX
+
+[URL Rewrite]
+^https?:\/\/(i|b\.i)\.instagram\.com\/api\/v\d+\/(ads|advertising|ad_|loom_fetch_media|graph_ad) - reject-dict
+
+[Script]
+IG_AdBlock_App = type=http-response,pattern=^https?:\/\/(i|b\.i|graph)\.instagram\.com\/(api\/v\d+\/(feed\/(timeline|reels_tray|reels_media|mixed_reels|user\/[^\/]+\/story)|clips\/(discover|home|stream|items|connected)|discover\/(topical_explore|explore_grid|ayml|sectioned_explore))|graphql),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/carlleilzj/Meta_AdBlock_QX/main/scripts/Instagram_AdBlock.js
+IG_AdBlock_Web = type=http-response,pattern=^https?:\/\/(www\.)?instagram\.com\/(graphql\/query|api\/graphql|api\/v1\/(feed|discover|clips)\/),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/carlleilzj/Meta_AdBlock_QX/main/scripts/Instagram_AdBlock.js
+
+[MITM]
+hostname = %APPEND% i.instagram.com, b.i.instagram.com, graph.instagram.com, www.instagram.com

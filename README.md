@@ -34,3 +34,19 @@
 - **功能**：去广告、简化导航栏
 - **注意**：可能需重装 Keep 应用
 - **安装**：[链接](KeepAds.sgmodule?raw=true)
+
+---
+
+### 🎵 抖音去广告
+
+- **功能**：去开屏广告、广告下发，拦截 PCDN
+- **适用**：抖音（国内版）
+- **安装**：[链接](Douyin.AdBlock.sgmodule?raw=true)
+
+---
+
+### 📷 Instagram 去广告
+
+- **功能**：去信息流 / Reels / 快拍 / 探索页赞助内容
+- **注意**：App 有证书锁定，可能失效；无法刷新时请停用
+- **安装**：[链接](Instagram.AdBlock.sgmodule?raw=true)
